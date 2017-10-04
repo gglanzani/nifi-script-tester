@@ -16,8 +16,8 @@
  */
 package nifi.script.impl;
 
-import org.apache.nifi.logging.ComponentLog;
 import nifi.script.ScriptEngineConfigurator;
+import org.slf4j.Logger;
 
 import java.io.File;
 import java.io.FilenameFilter;
@@ -43,7 +43,7 @@ abstract class AbstractModuleClassloaderConfigurator implements ScriptEngineConf
      * @return An array of URLs corresponding to all modules determined from the input set of module paths.
      */
     @Override
-    public URL[] getModuleURLsForClasspath(String[] modulePaths, ComponentLog log) {
+    public URL[] getModuleURLsForClasspath(String[] modulePaths, Logger log) {
         List<URL> additionalClasspath = new LinkedList<>();
         if (modulePaths != null) {
             for (String modulePathString : modulePaths) {

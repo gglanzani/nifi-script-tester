@@ -16,8 +16,8 @@
  */
 package nifi.script.impl;
 
-import org.apache.nifi.logging.ComponentLog;
 import nifi.script.ScriptEngineConfigurator;
+import org.slf4j.Logger;
 
 import javax.script.ScriptEngine;
 import javax.script.ScriptException;
@@ -34,7 +34,7 @@ public class JythonScriptEngineConfigurator implements ScriptEngineConfigurator 
     }
 
     @Override
-    public URL[] getModuleURLsForClasspath(String[] modulePaths, ComponentLog log) {
+    public URL[] getModuleURLsForClasspath(String[] modulePaths, Logger log) {
         // We don't need to add the module paths to the classpath, they will be added via sys.path.append
         return new URL[0];
     }

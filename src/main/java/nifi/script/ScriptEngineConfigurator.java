@@ -17,7 +17,7 @@
 package nifi.script;
 
 
-import org.apache.nifi.logging.ComponentLog;
+import org.slf4j.Logger;
 
 import javax.script.ScriptEngine;
 import javax.script.ScriptException;
@@ -31,7 +31,7 @@ public interface ScriptEngineConfigurator {
 
     String getScriptEngineName();
 
-    URL[] getModuleURLsForClasspath(String[] modulePaths, ComponentLog log);
+    URL[] getModuleURLsForClasspath(String[] modulePaths, Logger log);
 
     Object init(ScriptEngine engine, String[] modulePaths) throws ScriptException;
 
