@@ -58,7 +58,7 @@ public class ScriptRunner {
 
         // Expecting a single arg with the filename, will figure out language from file extension
         if (args == null || args.length < 1) {
-            System.err.println("Usage: java -jar nifi-script-tester-<version>-all.jar [options] <script file>");
+            System.err.println("Usage: java -cp nifi-script-tester-<version>-all.jar [options] <script file>");
             System.err.println(" Where options may include:");
             System.err.println("   -success            Output information about flow files that were transferred to the success relationship. Defaults to true");
             System.err.println("   -failure            Output information about flow files that were transferred to the failure relationship. Defaults to false");
